@@ -24,6 +24,9 @@ namespace RabinKarpSearcher
         /// <param name="function">The function used to hash needles.</param>
         public RabinKarpSearcher(uint needleLength, IRollingHashFunction<T> function)
         {
+            if (function == null)
+                throw new ArgumentNullException("function");
+
             this.NeedleLength = needleLength;
             this.Needles = new List<List<T>>();
             this.HashFunction = function;
