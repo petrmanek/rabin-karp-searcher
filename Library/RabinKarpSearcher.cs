@@ -70,7 +70,7 @@ namespace RabinKarpSearcher
         {
             // If the haystack is shorter than needle length, there will surely be no occurences.
             var occurences = new List<int>();
-            if (haystack.Count < NeedleLength)
+            if (haystack.Count < NeedleLength || !Needles.Any())
                 return occurences;
 
             // Otherwise, create a Bloom filter with needle hashes
