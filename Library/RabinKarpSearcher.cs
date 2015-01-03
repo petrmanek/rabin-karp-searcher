@@ -75,6 +75,9 @@ namespace RabinKarpSearcher
 
         private ICollection<int> SearchInternal(List<T> haystack, bool stopAtFirst)
         {
+            if (haystack == null)
+                throw new ArgumentNullException("haystack");
+
             // If the haystack is shorter than needle length, there will surely be no occurences.
             var occurences = new List<int>();
             if (haystack.Count < NeedleLength || !Needles.Any())

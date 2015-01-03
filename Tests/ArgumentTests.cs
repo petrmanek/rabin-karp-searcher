@@ -67,7 +67,7 @@ namespace Tests
             var results = searcher.Search(haystack.ToList());
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
         public void TestNullHaystack()
         {
             var needles = new string[] { "bu" };
