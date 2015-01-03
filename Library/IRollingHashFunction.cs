@@ -17,6 +17,7 @@ namespace RabinKarpSearcher
         /// </summary>
         /// <param name="list">The elements to compute hash for.</param>
         /// <returns>The hash of the given collection.</returns>
+        /// <exception cref="ArgumentException">Thrown if list.Count is not equal to WindowSize-</exception>
         uint Initialize(IList<T> list);
 
         /// <summary>
@@ -27,5 +28,10 @@ namespace RabinKarpSearcher
         /// <param name="next">The element to append.</param>
         /// <returns>The hash of collection without the first element and with 'next' appended at the end.</returns>
         uint Roll(uint hash, T prev, T next);
+
+        /// <summary>
+        /// The size of the hashed element collection.
+        /// </summary>
+        uint WindowSize { get; }
     }
 }

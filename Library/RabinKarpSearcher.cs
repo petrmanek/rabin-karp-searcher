@@ -18,6 +18,14 @@ namespace RabinKarpSearcher
         private List<List<T>> Needles { get; set; }
 
         /// <summary>
+        /// Convenience initializer so that you don't have to type so much.
+        /// </summary>
+        /// <param name="function">The function used to hash needles.</param>
+        public RabinKarpSearcher(IRollingHashFunction<T> function)
+            : this(function.WindowSize, function)
+        { }
+
+        /// <summary>
         /// Initializes new searcher with given parameters.
         /// </summary>
         /// <param name="needleLength">The uniform length of all needles.</param>
@@ -26,6 +34,8 @@ namespace RabinKarpSearcher
         {
             if (function == null)
                 throw new ArgumentNullException("function");
+            else if (function.WindowSize != needleLength)
+                throw new ArgumentException("The value of function.WindowSize must be equal to needleLength.");
 
             this.NeedleLength = needleLength;
             this.Needles = new List<List<T>>();

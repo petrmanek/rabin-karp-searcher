@@ -20,7 +20,7 @@ namespace Tests
             var results = searcher.Search(haystack.ToList());
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [TestMethod, ExpectedException(typeof(ArgumentException))]
         public void TestMismatchingNeedleLength()
         {
             var needles = new string[] { "bu" };
