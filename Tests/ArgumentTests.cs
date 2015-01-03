@@ -44,6 +44,18 @@ namespace Tests
         }
 
         [TestMethod, ExpectedException(typeof(ArgumentNullException))]
+        public void TestNullNeedle()
+        {
+            var needles = new string[] { "bu" };
+            var haystack = "Lorem ipsum haystack";
+
+            var searcher = new RabinKarpSearcher<char>(2, new ASCIIHashFunction(101, 2));
+            searcher.AddNeedle(null);
+
+            var results = searcher.Search(haystack.ToList());
+        }
+
+        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
         public void TestNullNeedleCollection()
         {
             var needles = new string[] { "bu" };

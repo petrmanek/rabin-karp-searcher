@@ -31,7 +31,9 @@ namespace RabinKarpSearcher
 
         public void AddNeedle(ICollection<T> needle)
         {
-            if (needle.Count != NeedleLength)
+            if (needle == null)
+                throw new ArgumentNullException("needle");
+            else if (needle.Count != NeedleLength)
                 throw new ArgumentException("Expected string of length equal to NeedleLength.");
 
             Needles.Add(needle.ToList());
@@ -39,13 +41,18 @@ namespace RabinKarpSearcher
 
         public void AddNeedles(IEnumerable<ICollection<T>> needles)
         {
+            if (needles == null)
+                throw new ArgumentNullException("needles");
+
             foreach (var needle in needles)
                 AddNeedle(needle);
         }
 
         public void RemoveNeedle(ICollection<T> needle)
         {
-            if (needle.Count != NeedleLength)
+            if (needle == null)
+                throw new ArgumentNullException("needle");
+            else if (needle.Count != NeedleLength)
                 throw new ArgumentException("Expected string of length equal to NeedleLength.");
 
             Needles.Remove(needle.ToList());
