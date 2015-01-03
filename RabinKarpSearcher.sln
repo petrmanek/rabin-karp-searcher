@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabinKarpSearcher", "RabinKarpSearcher.csproj", "{8BC614A5-199F-4711-A85C-780991178EDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{46C2617D-F63D-4641-A982-70D237F7CFFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{8BC614A5-199F-4711-A85C-780991178EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BC614A5-199F-4711-A85C-780991178EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BC614A5-199F-4711-A85C-780991178EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C2617D-F63D-4641-A982-70D237F7CFFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C2617D-F63D-4641-A982-70D237F7CFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C2617D-F63D-4641-A982-70D237F7CFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C2617D-F63D-4641-A982-70D237F7CFFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
